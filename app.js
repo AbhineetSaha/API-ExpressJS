@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3001
 const path = require ('path')
 
 app.get('/', (req, res) => {
@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 
 app.get('/favicon.ico', function(req, res){
   var options = {
-      root: path.join(__dirname , '../assets')
+      root: path.join(__dirname , 'assets')
   };
    
   var fileName = 'favicon.ico';
@@ -22,22 +22,22 @@ app.get('/favicon.ico', function(req, res){
   });
 });
 
-app.get('/eb', function(req,res){
-    res.redirect('')
-})
+// app.get('/eb', function(req,res){
+//     res.redirect('')
+// })
 
-app.get('/event', function(req,res){
-    res.redirect('')
+// app.get('/event', function(req,res){
+//     res.redirect('')
  
-})
-app.get('/projects', function(req,res){
-    res.redirect('')
-})
+// })
+// app.get('/projects', function(req,res){
+//     res.redirect('')
+// })
 
-app.get('/api', function(req,res){
-   res.redirect('')
-})
+// app.get('/api', function(req,res){
+//    res.redirect('')
+// })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`API is listening on port ${port}`)
 })
